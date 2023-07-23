@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: H Plus Blog API
+tags:
+  - name: Article
+    description: Articles for the H Plus Sport Blog
+paths:
+  /article:
+    get:
+      tags:
+        - Article
+      responses:
+        200:
+          description: Page of Articles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    createdDate:
+                      type: string
+                      format: date
+                    tagline:
+                      type: string
+                    content:
+                      type: string
+                    category:
+                      type: string
+                    tags:
+                      type: array
+                      items:
+                        type: string
