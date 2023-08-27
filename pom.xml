@@ -13,6 +13,7 @@
         <module>http-client-server</module>
         <module>java-core</module>
         <module>spring</module>
+        <module>spring-with-cosmos-db</module>
     </modules>
 
 </project>
