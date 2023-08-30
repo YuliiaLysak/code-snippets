@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: http-function-to-storage
+
+  cloud:
+    azure:
+      storage:
+        blob:
+          account-name: ${AZURE_STORAGE_ACCOUNT:storageaccount}
+          container-name: ${STORAGE_CONTAINER_NAME:reserved-order-items}
