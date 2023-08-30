@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>edu.lysak</groupId>
-        <artifactId>code-snippets</artifactId>
+        <artifactId>azure</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <packaging>jar</packaging>
-    <artifactId>azure-functions</artifactId>
+    <artifactId>functions</artifactId>
 
     <name>Sample Azure Function</name>
     <description>Demo Spring Boot, Azure Function - HttpTrigger (DI adapter)</description>

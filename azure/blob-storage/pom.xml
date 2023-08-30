@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>edu.lysak</groupId>
-        <artifactId>code-snippets</artifactId>
+        <artifactId>azure</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>azure-blob-storage</artifactId>
+    <artifactId>blob-storage</artifactId>
 
     <properties>
         <java.version>17</java.version>
