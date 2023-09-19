@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    azure:
+      servicebus:
+        namespace: petstore-orders
+        entity-name: reserved-order-items
+        entity-type: queue

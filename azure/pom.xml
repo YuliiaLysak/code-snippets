@@ -17,6 +17,7 @@
         <module>functions</module>
         <module>http-function-to-storage</module>
         <module>spring-with-cosmos-db</module>
+        <module>service-bus</module>
     </modules>
 
 </project>
