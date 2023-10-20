@@ -1,0 +1,42 @@
+version: '3.1'
+
+services:
+  mongodb:
+    image: mongo:6.0.8
+    container_name: hyper-mongo
+    ports:
+      - "27027:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    env_file:
+      - .env
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - hyper-task-manager-network
+
+  hyper-service:
+    build:
+      context: .
+      dockerfile: 'Dockerfile'
+    container_name: hyper-task-manager
+    ports:
+      - "8000:8000"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_HOST_NAME: mongodb
+      MONGO_PORT_NUMBER: "27017"
+    env_file:
+      - .env
+    networks:
+      - hyper-task-manager-network
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo-data:
+
+networks:
+  hyper-task-manager-network:
