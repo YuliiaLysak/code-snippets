@@ -11,6 +11,7 @@
     <modules>
         <module>apache-beam</module>
         <module>azure</module>
+        <module>benchmarking</module>
         <module>http-client-server</module>
         <module>java-core</module>
         <module>spring</module>
